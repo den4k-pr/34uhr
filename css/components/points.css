@@ -1,0 +1,205 @@
+.points {
+    padding-left: 2.34vw;
+    padding-right: 2.34vw;
+}
+
+.points-components {
+    display: flex;
+    flex-direction: column;
+    gap: 11.68vw;
+    padding-top: 7vw;
+}
+
+.points-component {
+    position: relative;
+    border-radius: 4.44vw;
+    width: 74.3vw;
+    height: 35.05vw;
+    padding: 5.84vw;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.points-component:nth-child(1) {
+    background-image: url(../../images/itm-6.webp);
+}
+
+.points-component:nth-child(2) {
+    background-image: url(../../images/itm-7.webp);
+}
+
+.points-component:nth-child(3) {
+    background-image: url(../../images/itm-8.webp);
+}
+
+.points-component:nth-child(4) {
+    background-image: url(../../images/itm-9.webp);
+}
+
+.points-component:nth-child(5) {
+    background-image: url(../../images/itm-10.webp);
+}
+
+.points-component:nth-child(6) {
+    background-image: url(../../images/itm-11.webp);
+}
+
+.points-component-num {
+    font-weight: 700;
+    font-size: 5.84vw;
+    line-height: 155%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    display: block;
+    width: 9.35vw;
+    border-radius: 100%;
+    font-family: 'Panchang';
+    height: 9.35vw;
+    background-color: #F85301;
+    position: absolute;
+    top: -4.67vw;
+    left: -4.67vw;
+}
+
+.points-component-title {
+    font-weight: 700;
+    font-size: 3.54vw;
+    line-height: 120%;
+    padding-right: 10%;
+    padding-bottom: 2.34vw;
+    text-transform: uppercase;
+    color: #f85301;
+}
+
+.points-component-text {
+    font-weight: 500;
+    padding-right: 20%;
+    font-size: 2.87vw;
+    line-height: 120%;
+    color: #000;
+}
+
+.cp-1 {
+    margin-right: auto;
+    margin-left: 4%;
+    position: relative;
+}
+
+.cp-1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../../images/mob-vector.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 23.36vw;
+    height: 11.68vw;
+    right: -25%;
+    bottom: -11.68vw;
+}
+
+.cp-2 {
+    margin-left: auto;
+    position: relative;
+}
+
+.cp-2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../../images/mob-vector.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 23.36vw;
+    height: 11.68vw;
+    left: 6%;
+    bottom: -11.68vw;
+}
+
+.cp-2:last-child:after{
+    display: none;
+}
+
+.points-component {
+    opacity: 0.4; /* Напівпрозорість */
+    transform: scale(0.92); /* Зменшений розмір */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.6s ease;
+    filter: blur(1px); /* Опціонально: легке розмиття для фокусу */
+}
+
+/* Стан, коли компонент у центрі (головний) */
+.points-component.is-active {
+    opacity: 1;
+    transform: scale(1); /* Повертаємо до нормального розміру */
+    filter: blur(0);
+    z-index: 10; /* Щоб активний елемент був візуально вище */
+}
+
+/* Плавність для векторів-стрілочок (::after) */
+.points-component::after {
+    transition: opacity 0.6s ease;
+    opacity: 0.2; /* Стрілочки теж приглушені, поки не в центрі */
+}
+
+.points-component.is-active::after {
+    opacity: 1;
+}
+
+@media (min-width: 1000px) {
+    .points {
+        padding-left: 0.7vw;
+        padding-right: 0.7vw;
+        max-width: 67.08vw;
+        margin: 0 auto;
+    }
+
+    .points-components {
+        gap: 3.5vw;
+        padding-top: 2.1vw;
+    }
+
+    .points-component {
+        border-radius: 1.33vw;
+        width: 38.52vw;
+        height: 12.11vw;
+        padding: 1.75vw;
+    }
+
+    .points-component-num {
+        font-size: 1.95vw;
+        width: 3.2vw;
+        height: 3.2vw;
+        top: -1.4vw;
+        left: -1.4vw;
+    }
+
+    .points-component-title {
+        font-size: 1.4vw;
+        padding-bottom: 0.7vw;
+    }
+
+    .points-component-text {
+        font-size: 1.3vw;
+        padding-right: 15%;
+    }
+
+    .cp-1::after {
+        width: 18vw;
+        height: 13.5vw;
+        right: -18vw;
+        bottom: -3.5vw;
+        background-image: url(../../images/desc-vector.png);
+    }
+
+    .cp-2::after {
+        width: 18vw;
+        height: 13.5vw;
+        left: -17vw;
+        bottom: -3.5vw;
+        background-image: url(../../images/desc-vector-2.png);
+    }
+}

@@ -1,0 +1,184 @@
+.asks {
+    padding-top: 14.02vw;   /* 60px */
+    padding-left: 2.34vw;   /* 10px */
+    padding-right: 2.34vw;  /* 10px */
+}
+
+.asksContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 9.35vw auto;    /* 40px */
+    gap: 3.5vw;             /* 15px */
+}
+
+.asksContainer-item {
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.asksContainer-item-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.23vw solid #F85401; /* ~1px */
+    border-radius: 4.2vw;         /* 18px */
+    width: 92.99vw;               /* 398px */
+    height: 12.38vw;              /* 53px */
+    padding: 0 4.67vw;            /* 20px */
+    box-shadow: 0 0.47vw 6.31vw 0 rgba(0, 0, 0, 0.16);
+    background: linear-gradient(90deg, #f85301 0%, #000 100%);
+}
+
+.asksContainer-item-top div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.34vw;                  /* 10px */
+}
+
+.label {
+    font-weight: 400;
+    font-size: 8.18vw;            /* 35px */
+    width: 7.01vw;                /* 30px */
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    transition: transform 0.3s ease;
+    order: 1;
+}
+
+.asksContainer-item-top .mainText {
+    font-size: 3.5vw;             /* 15px */
+    padding-right: 10%;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+}
+
+.asksContainer-item-top .q {
+    border-radius: 17.06vw;       /* 73px */
+    min-width: 8.18vw;            /* 35px */
+    max-height: 8.18vw;           /* 35px */
+    font-size: 3.5vw;             /* 15px */
+    line-height: 8.18vw;          /* 35px */
+    text-align: center;
+    color: #8F8F8F;
+    background: rgba(255, 255, 255, 0.12);
+    transition: .3s;
+}
+
+.q-arrow-body {
+    object-fit: contain;
+    background: linear-gradient(150deg, #fff 0%, #e4e4e4 100%);
+    min-width: 8.88vw;            /* 38px */
+    max-width: 8.88vw;            /* 38px */
+    height: 8.88vw;               /* 38px */
+    border-radius: 1.87vw;        /* 8px */
+    padding: 1.87vw;              /* 8px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.asksContainer-item-bottom {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    box-shadow: 0 0 8.88vw 0 #000;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3.27vw;        /* 14px */
+    width: 92.99vw;               /* 398px */
+    padding: 0;
+    margin: 0;
+}
+
+.asksContainer-item.active .asksContainer-item-bottom {
+    opacity: 1;
+    margin: 3.5vw 0;              /* 15px */
+    padding: 4.67vw;              /* 20px */
+    max-height: 1000px;           /* Для анімації */
+}
+
+.asksContainer-item-bottom p {
+    max-width: 100%;
+    padding-right: 2.34vw;        /* 10px */
+    line-height: 4.2vw;           /* 18px */
+    font-size: 3.27vw;            /* 14px */
+}
+
+@media (min-width: 1000px) {
+    .asks {
+        padding-top: 4.2vw;       /* 60px / 14.28 */
+        padding-left: 0.7vw;      /* 10px */
+        padding-right: 0.7vw;
+        max-width: 37.08vw;
+        margin: 0 auto;
+    }
+
+    .asksContainer {
+        margin: 2.8vw auto;       /* 40px */
+        gap: 1.05vw;              /* 15px */
+    }
+
+    .asksContainer-item-top {
+        border-width: 0.07vw;     /* 1px */
+        border-radius: 1.26vw;    /* 18px */
+        width: 35vw;           /* 398px */
+        height: 5.51vw;           /* 53px */
+        padding: 0 1.4vw;         /* 20px */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .asksContainer-item-top div {
+        gap: 0.7vw;
+    }
+
+    .label {
+        font-size: 2.45vw;        /* 35px */
+        width: 2.1vw;             /* 30px */
+    }
+
+    .asksContainer-item-top .mainText {
+        font-size: 1.15vw;        /* 15px */
+    }
+
+    .asksContainer-item-top .q {
+        border-radius: 5.11vw;
+        min-width: 2.45vw;
+        max-height: 2.45vw;
+        font-size: 1.05vw;
+        line-height: 2.45vw;
+    }
+
+    .q-arrow-body {
+        min-width: 2.66vw;        /* 38px */
+        max-width: 2.66vw;
+        height: 2.66vw;
+        border-radius: 0.56vw;
+        padding: 0.56vw;
+    }
+
+    .asksContainer-item-bottom {
+        box-shadow: 0 0 2.66vw 0 #000;
+        border-radius: 0.98vw;    /* 14px */
+        width: 35vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .asksContainer-item.active .asksContainer-item-bottom {
+        margin: 1.05vw 0;
+        padding: 1.4vw;
+    }
+
+    .asksContainer-item-bottom p {
+        line-height: 1.26vw;      /* 18px */
+        font-size: 0.98vw;        /* 14px */
+    }
+}

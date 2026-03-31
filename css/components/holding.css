@@ -1,0 +1,231 @@
+.holding {
+    padding-left: 2.34vw;
+    padding-right: 2.34vw;
+    padding-bottom: 30px;
+}
+
+.holding-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9.35vw;
+    width: 100%;
+}
+
+.holding-items .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9.35vw;
+    width: 100%;
+}
+
+.holding-items-element-wrp {
+    position: relative;
+}
+
+/* Мобільні стилі з !important */
+
+
+.holding-items-element {
+    border-radius: 4.21vw;
+    width: 70.56vw;
+    height: 62.15vw;
+    padding: 5.84vw 0 0 0;
+    box-shadow: 0 0 8.88vw 0 #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #6d6d6d8a;
+    backdrop-filter: blur(4px);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+    overflow: hidden;
+}
+
+.element-frame-r,
+.element-frame-l {
+    display: block;
+    width: 20.56vw;
+    height: 20.56vw;
+    object-fit: contain;
+    z-index: -1;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.element-frame-l {
+    left: -16%;
+    top: 20%;
+}
+
+.element-frame-r {
+    right: -18%;
+    bottom: -11%;
+}
+
+.h-itm-1 {
+    background-image: url(../../images/itm-1.webp);
+    background-size: 50%;
+}
+
+.h-itm-2 {
+    background-image: url(../../images/itm-2.webp);
+    background-size: 60%;
+}
+
+.h-itm-3 {
+    background-image: url(../../images/itm-3.webp);
+    background-size: 45%;
+}
+
+.holding-items-element-title {
+    font-weight: 600;
+    font-size: 3.74vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.holding-items-element .mainText {
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(0, 0, 0, 0.778) 100%);
+    padding-bottom: 3.5vw;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+}
+
+@media (min-width: 1000px) {
+    .swiper {
+        overflow: hidden !important;
+        padding-bottom: 4vw !important;
+    }
+
+    .holding-pagination-body {
+        position: relative;
+        max-width: 67.08vw;
+        margin: 0 auto;
+    }
+
+    .holding-items {
+        display: block;
+        gap: 0;
+        max-width: 67.08vw;
+        position: relative;
+    }
+
+    .holding-items .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        width: 30.21vw !important;
+    }
+
+    .holding-items-element {
+        border-radius: 1.25vw;
+        width: 30.21vw;
+        height: 14.44vw;
+        padding: 1.4vw 1vw;
+        align-items: flex-start;
+        box-shadow: none;
+        justify-content: flex-start;
+        background-position: right;
+        gap: 1vw;
+    }
+
+    .holding-items-element-title {
+        font-size: 1.67vw;
+        text-align: left;
+        padding-right: 35%;
+    }
+
+    .holding-items-element .mainText {
+        text-align: left;
+        padding: 0;
+        background: none;
+        padding-right: 15%;
+    }
+
+    .holding-items-element-wrp {
+        margin-left: 6%;
+    }
+
+    .element-frame-r {
+        display: none;
+    }
+
+    .element-frame-l {
+        width: 7.61vw;
+        height: 8.61vw;
+        left: -12%;
+        top: 20%;
+    }
+
+    .h-itm-1 {
+        background-size: 30%;
+    }
+
+    .h-itm-2 {
+        background-size: 40%;
+    }
+
+    .h-itm-3 {
+        background-size: 31%;
+    }
+
+    .holding-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.56vw;
+        position: relative;
+        bottom: 0 !important;
+        top: auto !important;
+        margin-top: 2.1vw;
+    }
+
+    .holding-pagination .swiper-pagination-bullet {
+        width: 0.84vw;
+        height: 0.84vw;
+        background-color: rgb(255, 255, 255);
+        border: 0.14vw solid #F55201;
+        border-radius: 50%;
+        opacity: 1;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    .holding-pagination .swiper-pagination-bullet-active {
+        background-color: #F55201;
+        width: 0.98vw;
+        height: 0.98vw;
+        box-shadow: 0 0 0 0.35vw #391300;
+    }
+
+    .holding-pagination .swiper-pagination-bullet:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .holding-subtitle{
+        font-weight: 400;
+        font-size: 1.68vw;
+        line-height: 120%;
+        padding-bottom: 3vw;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+    }
+
+    .holding-subtitle span{
+        font-weight: 600;
+    }
+}

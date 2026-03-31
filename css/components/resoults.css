@@ -1,0 +1,75 @@
+.resoults-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4.67vw;
+    padding: 2.34vw;
+}
+
+.resoults-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resoults-item div{
+    max-width: 50%;
+}
+
+.resoults-item img {
+    width: 34.58vw;
+    height: 51.87vw;
+    margin-right: 1.17vw;
+}
+
+.resoults-item-num {
+    font-family: 'Panchang';
+    font-weight: 700;
+    font-size: 14.95vw;
+    line-height: 100%;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #f85301 0%, #000 81%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resoults-item-text {
+    font-weight: 600;
+    font-size: 3.74vw;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.resoults-item-text span {
+    color: #f85301;
+}
+
+@media (min-width: 1000px) {
+    .resoults{
+        max-width: 67.08vw;
+        margin: 0 auto;
+    }
+    
+    .resoults-items {
+        gap: 1.4vw;
+        padding: 0.7vw;
+        flex-direction: row;
+    }
+
+    .resoults-item img {
+        width: 10.36vw;
+        height: 15.55vw;
+        margin-right: 0.35vw;
+    }
+
+    .resoults-item-num {
+        font-size: 4.48vw;
+    }
+
+    .resoults-item-text {
+        font-size: 1.12vw;
+    }
+}

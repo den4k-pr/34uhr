@@ -1,0 +1,137 @@
+.system {
+    padding-left: 2.34vw;
+    padding-right: 2.34vw;
+}
+
+.system-subTitle {
+    font-weight: 400;
+    font-size: 3.74vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.system-subTitle span {
+    font-weight: 600;
+    color: #f85301;
+}
+
+.system-elements {
+    padding-top: 7%;
+}
+
+.system-elements-row {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.system-elements-row::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2.34vw;
+    height: 46.73vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../images/line-2.png);
+    left: -5%;
+    top: 0;
+}
+
+.system-element {
+    padding-bottom: 3.5vw;
+}
+
+.system-element-title {
+    font-weight: 600;
+    font-size: 3.74vw;
+    line-height: 120%;
+    width: 75vw;
+    height: 10.28vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 0 0 8.88vw 0 #000;
+    padding-left: 3vw;
+    background: linear-gradient(90deg, #f85301 0%, #000 100%);
+    border-radius: 1.64vw;
+}
+
+.system-element .mainText {
+    text-align: left;
+    padding-left: 3vw;
+    padding-top: 3vw;
+}
+
+@media (min-width: 1000px) {
+    .system {
+        padding-left: 0.7vw;
+        padding-right: 0.7vw;
+        max-width: 67.08vw;
+        margin: 0 auto;
+    }
+
+    .system-elements-row:first-child:before{
+        display: none;
+    }
+
+    .system-subTitle {
+        font-size: 1.4vw;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .system-elements-row::before {
+        width: 0.7vw;
+        height: 14vw;
+        left: -5%;
+    }
+
+    .br-m{
+        display: none;
+    }
+
+    .system-elements-row::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 2.34vw;
+        height: 17vw;
+        left: -9%;
+    }
+
+    .system-elements-row{
+        width: 100%;
+    }
+
+    .system-elements{
+        display: flex;
+        align-items: center;
+        gap: 3vw;
+        padding-left: 4%;
+    }
+
+    .system-element {
+        padding-bottom: 1.05vw;
+        max-width: 27vw;
+        height: 12vw;
+    }
+
+    .system-element-title {
+        font-size: 1.32vw;
+        width: 25.48vw;
+        height: 4.08vw;
+        box-shadow: 0 0 2.66vw 0 #000;
+        padding-left: 0.9vw;
+        border-radius: 1vw;
+    }
+
+    .system-element .mainText {
+        padding-left: 0.9vw;
+        padding-top: 0.9vw;
+    }
+}

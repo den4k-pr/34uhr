@@ -1,0 +1,299 @@
+.header {
+    background-image: url(../../images/main-fon-m.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    padding: clamp(40px, 4vw, 60px) 10px;
+    position: relative;
+}
+
+.header__top {
+    position: relative;
+}
+
+.header__top-title {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 6.6vw;
+    line-height: 129%;
+    text-transform: uppercase;
+    font-family: 'Inter light';
+    text-align: center;
+    color: #fff;
+}
+
+.header__top-title span {
+    color: #f50;
+}
+
+.header__top-subTitle {
+    font-weight: 600;
+    font-size: 3.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 135%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    width: 90.13vw;
+    margin: 0 auto;
+    height: 9.33vw;
+    box-shadow: 0 0 38px 0 #000;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.header__price::after {
+    content: "";
+    display: block;
+    width: 35.33vw;
+    height: 35.33vw;
+    margin-top: -3%;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../../images/price-m-frame.png);
+}
+
+.header__price {
+    position: absolute;
+    box-shadow: 0 0 38px 0 #000;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(3deg);
+    border-radius: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 26.33vw;
+    height: 26.33vw;
+    bottom: 20%;
+    right: 5%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.header__price:hover{
+    background: rgba(255, 255, 255, 0.143);
+    transform: scale(1.01);
+}
+
+.header__price-was {
+    font-weight: 700;
+    font-size: 3vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-family: 'Panchang';
+}
+
+.header__price-was span {
+    position: relative;
+}
+
+.header__price-was span::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.3vw;
+    position: absolute;
+    top: 1.6vw;
+    left: 0;
+    background-color: #FF0000;
+}
+
+.header__price-now {
+    font-weight: 700;
+    line-height: 94%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: 6.63vw;
+    color: #f85301;
+    font-family: 'Panchang';
+}
+
+.header__content {
+    height: 140vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10%;
+}
+
+.header__content-title::before {
+    content: "";
+    display: block;
+    background-image: url(../../images/line.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 5px;
+    width: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.header__content-title {
+    font-weight: 600;
+    font-size: clamp(15px, 2.22vw, 24px);
+    line-height: 120%;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.header__content-text {
+    font-weight: 400;
+    font-size: clamp(15px, 2.22vw, 24px);
+    line-height: 120%;
+    margin: 0 3%;
+    text-align: center;
+    color: #fff;
+}
+
+.header__content-button {
+    font-weight: 700;
+    font-size: clamp(16px, 2.22vw, 30px);
+    box-shadow: 0 3px 58px 0 #ff5301;
+    background: linear-gradient(185deg, #ff4000 0%, #f70 100%);
+    line-height: 125%;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 70vw;
+    max-width: 420px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s all;
+}
+
+.header__content-button:hover{
+    background: linear-gradient(185deg, #fc5f2a 0%, rgb(238, 111, 0) 100%);
+    transform: scale(1.01);
+}
+
+.header__content-button:after {
+    content: "";
+    display: block;
+    width: 93%;
+    border-radius: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -76%;
+    z-index: 1;
+    background-image: url(../../images/shines.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media(min-width: 1000px){
+    .header{
+        background-image: url(../../images/main-fon-d.webp);
+    }
+
+    .header__wrapper{
+        max-width: 67.08vw;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        height: 60vw;
+    }
+
+    .header__top-title {
+        font-weight: 700;
+        gap: 5px;
+        font-size: 5.56vw;
+        flex-direction: column;
+        font-family: 'Panchang';
+    }
+
+    .header__top-title span {
+        color: #f50;
+    }
+
+    .header__top-subTitle {
+        font-size: 1.67vw;     
+        border-radius: 1.04vw; 
+        width: 42.78vw;        
+        height: 4.17vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(2px);
+    }
+
+    .header__content{
+        height: auto;
+        gap: 20px;
+        max-width: 40%;
+        margin-left: auto;
+        bottom: 9%;
+        position: absolute;
+        right: 0%;
+    }
+
+    .header__price{
+        left: 5%;
+    }
+
+    .header__content-title,
+    .header__content-text{
+        text-align: left;
+        padding-left: 7%;
+        margin: 0;
+        font-size: 1.67vw;
+        width: 30vw;
+    }
+
+    .header__content-title::before{
+        display: none;
+    }
+
+    .header__content-button{
+        font-size: 1.67vw;
+        border-radius: 0.49vw; /* 7px */
+        width: 27.92vw;        /* 402px */
+        height: 7.15vw;        /* 103px */
+    }
+
+    .header__price::after{
+        background-image: url(../../images/price-d-frame.png);
+        
+    }
+
+    .header__price {
+        transform: rotate(0);
+        width: 16.6vw;
+        height: 16.6vw;
+        bottom: 8%;
+    }
+
+    .header__price::after {
+        width: 20.21vw;
+        height: 20.21vw;
+    }
+
+    .header__price-was {
+        font-size: 2.02vw;
+    }
+
+    .header__price-was span:before{
+        top: 1vw;
+    }
+
+    .header__price-now {
+        font-size: 4.44vw;
+    }
+}
