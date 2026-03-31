@@ -9,11 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     slides.forEach(slide => {
       if (isDesktop) {
-        // На десктопі очищаємо все, щоб Swiper сам керував шириною
-        slide.style.setProperty('width', 'auto', 'important');
-        slide.style.setProperty('height', 'auto', 'important');
+        // ВИДАЛЯЄМО !important, щоб Swiper міг ставити свої обчислені розміри
+        slide.style.removeProperty('width');
+        slide.style.removeProperty('height');
       } else {
-        // На мобілці залізобетонно ставимо твої розміри
         slide.style.setProperty('width', '70.56vw', 'important');
         slide.style.setProperty('height', '62.15vw', 'important');
       }
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isDesktop) {
       if (!swiper) {
-        // Спочатку готуємо стилі
         handleSlideStyles(true);
         
         swiper = new Swiper(sliderEl, {
@@ -33,14 +31,24 @@ document.addEventListener("DOMContentLoaded", () => {
           slidesPerView: 2,
           spaceBetween: 20,
           centeredSlides: false,
-          loopedSlides: 3, 
+          
+          // ВАЖЛИВО ДЛЯ МАКБУКІВ ТА МИШОК:
+          simulateTouch: true,   // Імітація тачу мишкою
+          grabCursor: true,      // Курсор-ручка при наведенні
+          touchEventsTarget: 'container', // Ціль подій - весь контейнер
+          
           observer: true,
           observeParents: true,
+          
           pagination: {
             el: ".holding-pagination",
             type: "bullets",
             clickable: true
-          }
+          },
+          // Додаємо підтримку мишки/трекпада (опціонально)
+          mousewheel: {
+            forceToAxis: true,
+          },
         });
       }
     } else {
@@ -48,18 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
         swiper.destroy(true, true);
         swiper = null;
       }
-      // Після знищення слайдера повертаємо мобільні стилі
       handleSlideStyles(false);
     }
   }
 
-  // Запускаємо при старті
   initSwiper();
   
-  // Додаємо невеликий debounce для ресайзу, щоб не лагало
+  let resizeTimer;
   window.addEventListener("resize", () => {
-    initSwiper();
-    // Додатковий прогін стилів для надійності при зміні вікна
-    handleSlideStyles(window.innerWidth >= 1000);
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      initSwiper();
+      handleSlideStyles(window.innerWidth >= 1000);
+    }, 150);
   });
 });
